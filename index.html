@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institución Educativa San Isidro Labrador - Biblioteca Digital </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="public/assets/Imagen de WhatsApp 2025-08-13 a las 17.23.27_8c1eda0f.jpg">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <img src="public/assets/Imagen de WhatsApp 2025-08-13 a las 17.23.27_8c1eda0f.jpg" alt="Logo San Isidro Labrador" class="logo">
+                    <div class="institution-info">
+                        <h1 class="institution-name">Institución Educativa</h1>
+                        <h2 class="institution-subtitle">San Isidro Labrador</h2>
+                    </div>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                        <li><a href="#biblioteca" class="nav-link">Biblioteca </a></li>
+                        <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Welcome Section -->
+        <section id="inicio" class="welcome-section">
+            <div class="container">
+                <div class="welcome-content">
+                    <h3 class="welcome-title">Bienvenidos a la biblioteca digital del San Isidro Labrador</h3>
+                    <p class="welcome-text">Aquí encontrarás nuestro e-book de regalo. Un recurso educativo gratuito diseñado especialmente para enriquecer tu aprendizaje y conocimiento.</p>
+                    <div class="welcome-decoration"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- E-book Section -->
+        <section id="biblioteca" class="ebook-section">
+            <div class="container">
+                <div class="ebook-content">
+                    <!-- PDF Viewer -->
+                    <div class="pdf-viewer-container">
+                        <div class="pdf-header">
+                            <h4 class="pdf-title">Ciberseguridad: Una guía completa</h4>
+                            <button id="downloadBtn" class="download-btn">
+                                <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                    <polyline points="7,10 12,15 17,10"></polyline>
+                                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                                </svg>
+                                Descargar E-book
+                            </button>
+                        </div>
+                        
+                        <!-- PDF Embed -->
+                        <div class="pdf-embed-container">
+                            <iframe src="public/assets/Libro Ciberseguridad LAFC.pdf" class="pdf-embed"></iframe>
+
+                            <!-- Fallback for browsers that don't support embed -->
+                            <div class="pdf-fallback">
+                                <div class="fallback-content">
+                                    <svg class="pdf-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                        <polyline points="14,2 14,8 20,8"></polyline>
+                                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                                        <polyline points="10,9 9,9 8,9"></polyline>
+                                    </svg>
+                                    <h5>Vista previa no disponible</h5>
+                                    <p>Tu navegador no puede mostrar el PDF directamente.</p>
+                                    <a href="public/assets/Libro Ciberseguridad LAFC.pdf" target="_blank" class="view-pdf-btn">
+                                        Ver PDF en nueva pestaña
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Info -->
+                    <div class="ebook-info">
+                        <div class="info-card">
+                            <h5>Sobre este E-book</h5>
+                            <p>Este libro digital contiene información valiosa sobre ciberseguridad, diseñado especialmente para estudiantes y docentes de nuestra institución.</p>
+                            <ul class="features-list">
+                                <li>✓ Contenido actualizado</li>
+                                <li>✓ Descarga gratuita</li>
+                                <li>✓ Compatible con todos los dispositivos</li>
+                                <li>✓ Formato PDF optimizado</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contacto" class="contact-section">
+            <div class="container">
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="institution-contact">
+                            <div class="contact-logo">
+                                <svg class="shield-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                    <path d="M9 12l2 2 4-4"></path>
+                                </svg>
+                            </div>
+                            <div class="contact-text">
+                                <h4 class="contact-title">Institución Educativa</h4>
+                                <h5 class="contact-subtitle">San Isidro Labrador</h5>
+                                <p class="contact-description">Educando para la vida y el fortalecimiento cultural.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="useful-links">
+                        <h4 class="links-title">Enlaces Útiles</h4>
+                        <ul class="links-list">
+                            <li><a href="#inicio" class="useful-link">Inicio</a></li>
+                            <li><a href="#biblioteca" class="useful-link">Biblioteca Digital</a></li>
+                            <li><a href="#contacto" class="useful-link">Contacto</a></li>
+                            <li><a href="#" class="useful-link">Políticas de Uso</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="contact-details">
+                        <h4 class="contact-details-title">Contacto</h4>
+                        <div class="contact-item">
+                            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <span>eesanisidrolabrador@semvalledupar.gov.co</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span>Atanquez - Barrio Medellín - vía Guatapuri.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p class="footer-text">© <span id="currentYear"></span> Institución Educativa San Isidro Labrador</p>
+                    <p class="footer-subtitle">Proyecto: La seguridad informatica como herramienta de concientización y prevención para el beneficio de la comunidad kankuama</p>
+                </div>
+                <div class="footer-developer">
+                    <p class="developer-text">Desarrollado con <span class="heart">❤️</span> para la educación</p>
+                    <p class="footer-subtitle">Institución Educativa San Isidro Labrador</p>
+                </div>
+                <div class="footer-credits">
+                    <p class="credits-text">Desarrollado por: Ing. Luis Alejandro Fuentes Corzo</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>

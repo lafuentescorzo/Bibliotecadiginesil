@@ -1,0 +1,680 @@
+/* 
+ * Estilos para la Institución Educativa San Isidro Labrador
+ * Biblioteca Digital - E-book Viewer
+ * Colores principales: #0056A4 (azul) y #FFFFFF (blanco)
+ */
+
+/* Reset y configuración base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8fafc;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+.header {
+    background: linear-gradient(135deg, #0056A4 0%, #003d75 100%);
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 4px 20px rgba(0, 86, 164, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.institution-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.institution-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: -0.2rem;
+}
+
+.institution-subtitle {
+    font-size: 1.1rem;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+/* Navigation */
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Main Content */
+.main {
+    min-height: calc(100vh - 200px);
+}
+
+.welcome-section {
+    position: relative;
+    background: url("fondo1.jpg") no-repeat center;
+    background-size: cover; /* Hace que se recorte y llene todo el espacio */
+    background-position: center 40%; /* Mueve la imagen verticalmente */
+    height: 50vh;
+}
+
+
+/* Capa oscura encima de la imagen */
+.welcome-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.5),  /* Oscuro arriba */
+        rgba(0, 0, 0, 0.5)   /* Oscuro abajo */
+    );
+    z-index: 1;
+}
+
+/* Texto encima de la capa oscura */
+.welcome-section * {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+
+.welcome-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.welcome-text {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+.welcome-decoration {
+    width: 80px;
+    height: 4px;
+    background: white;
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+/* E-book Section */
+.ebook-section {
+    padding: 4rem 0;
+    background: white;
+}
+
+.ebook-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+/* PDF Viewer Container */
+.pdf-viewer-container {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 86, 164, 0.1);
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+}
+
+.pdf-header {
+    background: linear-gradient(135deg, #0056A4 0%, #003d75 100%);
+    color: white;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.pdf-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+/* Download Button */
+.download-btn {
+    background: white;
+    color: #0056A4;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.download-btn:hover {
+    background: #f1f5f9;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+.download-btn:active {
+    transform: translateY(0);
+}
+
+.download-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* PDF Embed */
+.pdf-embed-container {
+    position: relative;
+    height: 600px;
+    background: #f8fafc;
+}
+
+.pdf-embed {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: white;
+}
+
+/* PDF Fallback */
+.pdf-fallback {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8fafc;
+    z-index: 1;
+}
+
+.fallback-content {
+    text-align: center;
+    padding: 2rem;
+}
+
+.pdf-icon {
+    width: 64px;
+    height: 64px;
+    color: #0056A4;
+    margin-bottom: 1rem;
+}
+
+.fallback-content h5 {
+    font-size: 1.2rem;
+    color: #334155;
+    margin-bottom: 0.5rem;
+}
+
+.fallback-content p {
+    color: #64748b;
+    margin-bottom: 1.5rem;
+}
+
+.view-pdf-btn {
+    background: #0056A4;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.view-pdf-btn:hover {
+    background: #003d75;
+    transform: translateY(-2px);
+}
+
+/* E-book Info */
+.ebook-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.info-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 86, 164, 0.1);
+    border: 1px solid #e2e8f0;
+}
+
+.info-card h5 {
+    font-size: 1.3rem;
+    color: #0056A4;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.info-card p {
+    color: #64748b;
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.features-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.features-list li {
+    color: #334155;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Contact Section */
+.contact-section {
+    background: linear-gradient(135deg, #0056A4 0%, #003d75 100%);
+    color: white;
+    padding: 4rem 0;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.institution-contact {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.contact-logo {
+    flex-shrink: 0;
+}
+
+.shield-icon {
+    width: 48px;
+    height: 48px;
+    color: #fbbf24;
+    background: rgba(251, 191, 36, 0.1);
+    padding: 8px;
+    border-radius: 12px;
+}
+
+.contact-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #fbbf24;
+    margin-bottom: 0.25rem;
+}
+
+.contact-subtitle {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+}
+
+.contact-description {
+    font-size: 0.95rem;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.useful-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.links-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #fbbf24;
+    margin-bottom: 1.5rem;
+}
+
+.links-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.useful-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    transition: all 0.3s ease;
+    padding: 0.25rem 0;
+}
+
+.useful-link:hover {
+    color: #fbbf24;
+    padding-left: 0.5rem;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-details-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #fbbf24;
+    margin-bottom: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.contact-icon {
+    width: 20px;
+    height: 20px;
+    color: #fbbf24;
+    flex-shrink: 0;
+}
+
+.contact-item span {
+    font-weight: 400;
+}
+
+/* Footer */
+.footer {
+    background: #0f172a;
+    color: white;
+    padding: 2rem 0;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-text {
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.footer-subtitle {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.footer-developer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.developer-text {
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.heart {
+    color: #ef4444;
+    animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.footer-credits {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.credits-text {
+    font-weight: 500;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    color: #fbbf24;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+    
+    .logo-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .institution-name {
+        font-size: 1.3rem;
+    }
+    
+    .institution-subtitle {
+        font-size: 1rem;
+    }
+    
+    .nav-list {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .welcome-title {
+        font-size: 2rem;
+    }
+    
+    .welcome-text {
+        font-size: 1.1rem;
+    }
+    
+    .ebook-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .pdf-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .pdf-embed-container {
+        height: 400px;
+    }
+    
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .institution-contact {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .download-btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome-section {
+        padding: 2rem 0;
+    }
+    
+    .welcome-title {
+        font-size: 1.5rem;
+    }
+    
+    .ebook-section {
+        padding: 2rem 0;
+    }
+    
+    .pdf-embed-container {
+        height: 300px;
+    }
+    
+    .info-card {
+        padding: 1.5rem;
+    }
+}
+
+/* Animaciones y efectos adicionales */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.welcome-content,
+.ebook-content {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* Mejoras de accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* Focus states para accesibilidad */
+.nav-link:focus,
+.download-btn:focus,
+.view-pdf-btn:focus,
+.footer-link:focus {
+    outline: 2px solid #0056A4;
+    outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+    .header,
+    .footer,
+    .download-btn {
+        display: none;
+    }
+    
+    .main {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .ebook-section {
+        padding: 1rem 0;
+    }
+}
