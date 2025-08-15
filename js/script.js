@@ -60,16 +60,16 @@ function initializeDownloadButton() {
  * Función para descargar el PDF
  */
 function downloadPDF() {
-    const pdfUrl = 'https://drive.google.com/file/d/1ToG8S9qFz-IZFikw_QjxiHlD1RWewABZ/view?usp=sharing';
+    
     const fileName = 'Libro_Ciberseguridad.pdf';
     
     try {
-        // Crear elemento de descarga temporal
-        const downloadLink = document.createElement('a');
-        downloadLink.href = pdfUrl;
-        downloadLink.download = fileName;
-        downloadLink.style.display = 'none';
-        
+     // Crear elemento de descarga temporal con enlace de Google Drive
+const downloadLink = document.createElement('a');
+downloadLink.href = 'https://drive.google.com/uc?export=download&id=1ToG8S9qFz-IZFikw_QjxiHlD1RWewABZ';
+downloadLink.target = '_blank'; // Abre en nueva pestaña
+downloadLink.style.display = 'none';
+
         // Agregar al DOM, hacer clic y remover
         document.body.appendChild(downloadLink);
         downloadLink.click();
