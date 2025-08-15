@@ -60,8 +60,8 @@ function initializeDownloadButton() {
  * Función para descargar el PDF
  */
 function downloadPDF() {
-    const pdfUrl = 'public/assets/Libro Ciberseguridad LAFC.pdf';
-    const fileName = 'Libro_Ciberseguridad_LAFC.pdf';
+    const pdfUrl = 'https://drive.google.com/file/d/1ToG8S9qFz-IZFikw_QjxiHlD1RWewABZ/view?usp=sharing';
+    const fileName = 'Libro_Ciberseguridad.pdf';
     
     try {
         // Crear elemento de descarga temporal

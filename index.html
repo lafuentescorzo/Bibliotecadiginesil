@@ -51,22 +51,28 @@
             <div class="container">
                 <div class="ebook-content">
                     <!-- PDF Viewer -->
-                    <div class="pdf-viewer-container">
-                        <div class="pdf-header">
-                            <h4 class="pdf-title">Ciberseguridad: Una guía completa</h4>
-                            <button id="downloadBtn" class="download-btn">
-                                <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                                    <polyline points="7,10 12,15 17,10"></polyline>
-                                    <line x1="12" y1="15" x2="12" y2="3"></line>
-                                </svg>
-                                Descargar E-book
-                            </button>
-                        </div>
-                        
-                        <!-- PDF Embed -->
-                        <div class="pdf-embed-container">
-                            <iframe src="public/assets/Libro Ciberseguridad LAFC.pdf" class="pdf-embed"></iframe>
+<div class="pdf-viewer-container">
+    <div class="pdf-header">
+        <h4 class="pdf-title">Ciberseguridad: Una guía completa</h4>
+        <a href="https://drive.google.com/uc?export=download&id=1ToG8S9qFz-IZFikw_QjxiHlD1RWewABZ" 
+           class="download-btn" 
+           target="_blank">
+            <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7,10 12,15 17,10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            Descargar E-book
+        </a>
+    </div>
+    
+    <!-- PDF Embed -->
+    <div class="pdf-embed-container">
+        <iframe src="https://drive.google.com/file/d/1ToG8S9qFz-IZFikw_QjxiHlD1RWewABZ/preview" 
+                class="pdf-embed">
+        </iframe>
+    </div>
+</div>
 
                             <!-- Fallback for browsers that don't support embed -->
                             <div class="pdf-fallback">
