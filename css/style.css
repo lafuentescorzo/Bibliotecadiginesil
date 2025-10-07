@@ -700,30 +700,45 @@ body {
   background: #e6f0ff; /* blanco */
 }
 
-/* ...todo tu CSS anterior... */
-
-/* Footer */
-.footer {
-    background: #0f172a;
-    color: white;
-    padding: 2rem 0;
-}
-
-/* Ajustes responsive para móviles */
+/* ===== Responsive HERO / Bienvenida ===== */
 @media (max-width: 768px) {
-    .welcome-section {
-        background-size: contain;   /* Evita que la imagen se estire */
-        background-position: center top; /* Muestra la parte superior */
-        height: 35vh;               /* Reduce la altura visible */
-    }
+  /* Fondo: menos alto y enfocado arriba */
+  .welcome-section {
+    background-size: cover;          /* llena sin bandas */
+    background-position: center top; /* muestra parte superior */
+    height: 30vh;                    /* más bajo que antes */
+  }
 
-    .welcome-title {
-        font-size: 1.6rem;          /* Texto más pequeño */
-        padding: 0 1rem;
-    }
+  /* Oscurecer un poquito para legibilidad */
+  .welcome-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(0,0,0,.35),
+      rgba(0,0,0,.25)
+    );
+    pointer-events: none;
+  }
 
-    .welcome-text {
-        font-size: 1rem;
-        padding: 0 1rem;
-    }
+  /* Título y texto dentro del hero (cubrimos cualquier clase) */
+  .welcome-section h1,
+  .welcome-title {
+    font-size: clamp(1.4rem, 6vw, 1.8rem);
+    line-height: 1.2;
+    margin: 0 0 .5rem;
+    padding: 0 1rem;
+  }
+
+  .welcome-section p,
+  .welcome-text {
+    font-size: 1rem;
+    line-height: 1.45;
+    padding: 0 1rem 0.5rem;
+    max-width: 48ch;
+  }
+
+  /* Un poco menos de espacio bajo el header/nav en móvil */
+  .header { padding-bottom: .5rem; }
 }
