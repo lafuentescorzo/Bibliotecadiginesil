@@ -699,3 +699,31 @@ body {
 #biblioteca-mochila {
   background: #e6f0ff; /* blanco */
 }
+
+/* ...todo tu CSS anterior... */
+
+/* Footer */
+.footer {
+    background: #0f172a;
+    color: white;
+    padding: 2rem 0;
+}
+
+/* Ajustes responsive para móviles */
+@media (max-width: 768px) {
+    .welcome-section {
+        background-size: contain;   /* Evita que la imagen se estire */
+        background-position: center top; /* Muestra la parte superior */
+        height: 35vh;               /* Reduce la altura visible */
+    }
+
+    .welcome-title {
+        font-size: 1.6rem;          /* Texto más pequeño */
+        padding: 0 1rem;
+    }
+
+    .welcome-text {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+}
