@@ -678,3 +678,24 @@ body {
         padding: 1rem 0;
     }
 }
+
+/* Divisor entre secciones de libros */
+.section-divider {
+  border: 0;
+  height: 3px;
+  background: linear-gradient(to right, #0056A4, #003d75);
+  margin: 3rem auto;
+  width: 85%;
+  border-radius: 3px;
+}
+#biblioteca-ciberseguridad {
+  background: #e6f0ff; /* azul claro */
+}
+
+#biblioteca-aritama {
+  background: #e6f0ff; /* gris claro */
+}
+
+#biblioteca-mochila {
+  background: #e6f0ff; /* blanco */
+}
